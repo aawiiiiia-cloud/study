@@ -63,7 +63,7 @@ B 方案表述矛盾:"base64 → POST multipart"——multipart 一般传原始�
 folderId 何时该传没说明。
 需要的话我可以帮你把这段改写得更严谨(补失败处理、批量上限、字段示例)。
 
-回答评价:
+
 这段是某个「Muse」产品里 Agent 的系统提示词片段；具体怎么理解？ 怎么定义【产品】，你说里面有一个agent，指的是像Claude code或 openclaw 这种吗？
 例如我想要做一个某某 agent，具体是指什么？
 traceId：c7c1b24917891183579791001d51fc
@@ -111,8 +111,7 @@ Agent 收到后自己拆解:搜索 → 拿到一堆图片 URL → 调 upload-by-
 二、所以它和 Claude Code / OpenClaw 是同类吗?
 不是同一类。它们的差别不在技术,而在"谁提供工具、谁定义任务"。
 
-全屏
-复制
+
 通用型 Agent(Claude Code、个人助理型开源项目等)	嵌入式垂直 Agent(Muse 这个)
 Agent 和产品的关系	Agent 就是产品	Agent 是产品里的一个功能
 工具来源	通用能力:shell、读写文件、浏览器、外接 MCP	主要是自家后端 API
@@ -180,6 +179,11 @@ Job	帮设计师从社交平台采集参考图 → 分类 → 存入素材库
 关于 2026 年当下的具体框架和生态选择(工具暴露标准、可用的 harness 等),我的信息可能已经过时,建议你直接看现在主流方案的最新文档。但上面这套"Job → 工具 → 红线 → 形态 → 状态 → eval → 护栏"的拆法是不依赖具体技术栈的,可以直接拿去套。
 
 如果你说一下你想做的具体是哪个场景,我可以帮你把这七栏当场填出来,顺便判断一下它到底该做成 Agent 还是工作流。
+
+
+
+1.先想清楚"要不要 Agent"。 如果流程固定、分支不超过三条,写死的工作流 + 一两个 LLM 调用又快又稳,成本和不确定性都低一个数量级。Agent 的价值只在步骤数和顺序事先不知道的时候才成立。  你这到底在说什么？？？ 成本和不确定 相对于谁低一个数量级？？？
+2.我现在电脑上已经有codex和 Claude code 了，什么情况下需要做一个“agent”？？
 <think>
 The user's frustration is clear here, so I need to clarify my ambiguous statement — I meant the workflow's cost and uncertainty are an order of magnitude lower than the agent's, not some absolute comparison, and I should back that up with concrete examples. I also need to address that they already have Codex and Claude Code installed, so my answer should account for that existing setup.
 
